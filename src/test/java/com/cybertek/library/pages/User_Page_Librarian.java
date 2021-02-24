@@ -56,7 +56,11 @@ public class User_Page_Librarian extends BasePage{
     @FindBy(xpath = "//table[@id='tbl_users']//td[3]")
     public List<WebElement> userTable;
 
-
+    @FindBy(xpath = "//select[@name='tbl_users_length']")
+    public WebElement showRecordsDropdown;
 }
+
+
+
 
 
