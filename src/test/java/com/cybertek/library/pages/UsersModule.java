@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class UsersModule {
+public class UsersModule extends BasePage{
 
     @FindBy(xpath = "//select[@name='tbl_users_length']")
     public WebElement showRecordDropdown;

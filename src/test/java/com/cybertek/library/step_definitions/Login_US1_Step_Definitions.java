@@ -45,4 +45,10 @@ public class Login_US1_Step_Definitions {
 
 
     }
+
+    @Given("User login as a librarian")
+    public void userLoginAsALibrarian() {
+        homePage.homePageLanding();
+        homePage.loginLibrarian();
+    }
 }
