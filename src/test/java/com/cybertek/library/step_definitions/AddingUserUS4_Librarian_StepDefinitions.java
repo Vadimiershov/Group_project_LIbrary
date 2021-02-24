@@ -126,10 +126,10 @@ public class AddingUserUS4_Librarian_StepDefinitions {
 
     }
 
-    @Then("new user is successfully created")
-    public void new_user_is_successfully_created() {
+    @Then("new user {string} is successfully created")
+    public void newUserIsSuccessfullyCreated(String arg0) {
 
-    //    Assert.assertTrue (librarianPage.userTable.contains("beyoncee@mail.ru")||librarianPage.userTable.contains("shakirashakirae@mail.ru") );
+
 
     }
 

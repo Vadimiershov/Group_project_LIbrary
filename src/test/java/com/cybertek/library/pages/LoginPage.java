@@ -40,6 +40,9 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//a[@class='dropdown-item']")
     public WebElement logOutButtonLibr11;
 
+    @FindBy(id= "user_count")
+    public WebElement userCount;
+
 
     public void homePageLanding() {
         Driver.getDriver().get(ConfigurationReader.getProperty("URL"));
