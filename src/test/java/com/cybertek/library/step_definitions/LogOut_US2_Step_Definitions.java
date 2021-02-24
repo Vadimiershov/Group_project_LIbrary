@@ -5,6 +5,7 @@ import com.cybertek.library.pages.LoginPage;
 import com.cybertek.library.utilities.BrowserUtils;
 import com.cybertek.library.utilities.ConfigurationReader;
 import com.cybertek.library.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -25,9 +26,8 @@ LoginPage loginPage = new LoginPage();
 
     @When("the user is on {string} page")
     public void the_user_is_on_page(String string) {
-        String expectedTitle="Login - Library";
-        String actualTitle=Driver.getDriver().getTitle();
-        Assert.assertEquals(expectedTitle,actualTitle);
+        String actualPage = loginPage.pageTitle.getText();
+        Assert.assertTrue(actualPage.equalsIgnoreCase(actualPage));
     }
     @When("the student clicks the dropdown button")
     public void the_student_clicks_the_dropdown_button() {
@@ -44,5 +44,38 @@ LoginPage loginPage = new LoginPage();
         String actualTab= Driver.getDriver().getTitle();
         Assert.assertTrue(expectedTab.equals(actualTab));
 
+    }
+
+    @Given("the user librarian logs in as a {string}")
+    public void theUserLibrarianLogsInAsA(String arg0) {
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("URL"));
+        loginPage.loginField.sendKeys(ConfigurationReader.getProperty("LoginLibrarian11"));
+        loginPage.passwordField.sendKeys(ConfigurationReader.getProperty("PassLibrarian11"));
+        loginPage.loginButton.click();
+    }
+
+    @When("the librarian is on dashboard page")
+    public void theLibrarianIsOnDashboardPage() {
+        String actualPage = loginPage.pageTitle.getText();
+        Assert.assertTrue(actualPage.equalsIgnoreCase(actualPage));
+    }
+
+    @And("the librarian clicks the dropdown button")
+    public void theLibrarianClicksTheDropdownButton() {
+        loginPage.roleOfLibrarian.click();
+
+    }
+
+    @And("the librarian clicks the logout button")
+    public void theLibrarianClicksTheLogoutButton() {
+        loginPage.logOutButtonLibr11.click();
+    }
+
+    @Then("the user librarian sees the loginPage")
+    public void theUserLibrarianSeesTheLoginPage() {
+        String expectedTab = "Login - Library";
+        String actualTab= Driver.getDriver().getTitle();
+        Assert.assertTrue(expectedTab.equals(actualTab));
     }
 }

@@ -1,8 +1,8 @@
 
-
+@wip
 Feature: As a user, librarian and student are able to log out
 
-@wip
+
   Scenario: Verify students can logout
 
     Given the user login as a "Test Student 11"
@@ -13,8 +13,8 @@ Feature: As a user, librarian and student are able to log out
 
   Scenario: Verify librarians can logout
 
-    Given the user login as a "Test Librarian 11"
-    When the user is on "dashboard" page
+    Given the user librarian logs in as a "Test Librarian 11"
+    When the librarian is on dashboard page
     And the librarian clicks the dropdown button
     And the librarian clicks the logout button
-    Then the user sees the loginPage
+    Then the user librarian sees the loginPage
