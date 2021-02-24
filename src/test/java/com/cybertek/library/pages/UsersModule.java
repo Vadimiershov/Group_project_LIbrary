@@ -36,6 +36,9 @@ public class UsersModule extends BasePage{
     @FindBy(xpath = "//table[@id='tbl_users']//tr[1]//td[3]")
     public WebElement firstNameInTheColumn;
 
+    @FindBy(id = "menu_item")
+    public List<WebElement> listOfModulesLinks;
+
     //method to click on Show records dropdown
     public void showDropdownRecords(){
         BrowserUtils.waitForClickability(showRecordDropdown,5);
