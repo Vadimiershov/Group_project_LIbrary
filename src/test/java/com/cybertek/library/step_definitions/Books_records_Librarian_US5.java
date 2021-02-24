@@ -50,7 +50,6 @@ public class Books_records_Librarian_US5 {
 
     @Then("show records default value should be {int}")
     public void show_records_default_value_should_be(Integer expected) {
-
         BrowserUtils.wait(5);
         Select select = new Select(pageLibrarian.showRecordsDropdown);
         String actual = select.getFirstSelectedOption().getText();
