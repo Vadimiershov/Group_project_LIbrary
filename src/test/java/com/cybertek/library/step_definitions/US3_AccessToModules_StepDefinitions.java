@@ -8,10 +8,13 @@ import com.cybertek.library.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
-public class AccessToModules_US3_StepDefinitions {
+public class US3_AccessToModules_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
     UsersModule usersModule = new UsersModule();
@@ -36,8 +39,11 @@ public class AccessToModules_US3_StepDefinitions {
 
     @Then("the user should see following modules")
     public void the_user_should_see_following_modules(List<String> expectedModules) {
+
         List<String> actualModules = BrowserUtils.getElementsText(usersModule.listOfModulesLinks);
-        Assert.assertTrue(actualModules.contains(expectedModules));
+        System.out.println(actualModules);
+        System.out.println(expectedModules);
+        Assert.assertTrue(actualModules.equals(expectedModules));
     }
 
 

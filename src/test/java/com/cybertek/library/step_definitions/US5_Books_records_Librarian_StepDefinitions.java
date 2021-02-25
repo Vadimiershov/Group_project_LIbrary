@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class Books_records_Librarian_US5 {
+public class US5_Books_records_Librarian_StepDefinitions {
 
 
     LoginPage loginPage = new LoginPage();

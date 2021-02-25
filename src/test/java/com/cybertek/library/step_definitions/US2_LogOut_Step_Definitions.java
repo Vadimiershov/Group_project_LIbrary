@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class LogOut_US2_Step_Definitions extends BasePage {
+public class US2_LogOut_Step_Definitions extends BasePage {
 LoginPage loginPage = new LoginPage();
 
 

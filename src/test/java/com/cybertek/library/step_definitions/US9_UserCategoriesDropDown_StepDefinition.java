@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class UserCategoriesDropDown_StepDefinition {
+public class US9_UserCategoriesDropDown_StepDefinition {
 
     UsersModule usersModule = new UsersModule();
     Select select;
