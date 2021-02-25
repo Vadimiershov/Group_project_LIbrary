@@ -13,7 +13,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class AddingUserUS4_Librarian_StepDefinitions {
+public class US4_AddingUserLibrarian_StepDefinitions {
 
 
     LoginPage homePage = new LoginPage();

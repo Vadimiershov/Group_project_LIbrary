@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class Tables_US6_Student_StepDefinitions {
+public class US6_Tables_Student_StepDefinitions {
     LoginPage loginPage = new LoginPage();
     BooksModule booksModule=new BooksModule();
 
