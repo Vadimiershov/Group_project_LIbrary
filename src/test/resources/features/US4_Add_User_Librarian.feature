@@ -1,7 +1,7 @@
 Feature: Librarian should be able to add users with valid info
 
   Background: User should land on a homepage
-    Given user is on the homePage
+  //  Given user is on the homePage
     Given user is successfully logged in
 	#AC:
 	#1. Add users with all valid info.
@@ -25,9 +25,9 @@ Feature: Librarian should be able to add users with valid info
     Then new user "<Expected user>" is successfully created
 
     Examples:
-      | Full name        | Password | Email                   | User Group | Status   | Start Date | End Date   | Address         | Expected user    |
-      | Beyonce B        | 123@456# | beyoncej@mail.ru        | Students   | ACTIVE   | 2021/03/01 | 2022/03/01 | San Diego, Ca   | Beyonce B        |
-      | Shakira Gonzalez | 567@89&$ | shakirashakiraj@mail.ru | Librarian  | INACTIVE | 2022/02/01 | 2023/02/01 | Los Angeles, Ca | Shakira Gonzalez |
+      | Full name        | Password | Email                   | User Group | Status   | Start Date | End Date   | Address         | Expected user           |
+      | Beyonce B        | 123@456# | beyoncef@mail.ru        | Students   | ACTIVE   | 2021/03/01 | 2022/03/01 | San Diego, Ca   | beyoncef@mail.ru        |
+      | Shakira Gonzalez | 567@89&$ | shakirashakiraf@mail.ru | Librarian  | INACTIVE | 2022/02/01 | 2023/02/01 | Los Angeles, Ca | shakirashakiraf@mail.ru |
 
 
   Scenario: librarian should be able to close the Add User window with Close Button

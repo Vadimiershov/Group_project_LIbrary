@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class UsersModule {
+public class UsersModule extends BasePage{
 
     @FindBy(xpath = "//select[@name='tbl_users_length']")
     public WebElement showRecordDropdown;
@@ -35,6 +35,9 @@ public class UsersModule {
     //webElement for verification added user is in the table
     @FindBy(xpath = "//table[@id='tbl_users']//tr[1]//td[3]")
     public WebElement firstNameInTheColumn;
+
+    @FindBy(xpath = "//a[@class='nav-link']")
+    public List<WebElement> listOfModulesLinks;
 
     //method to click on Show records dropdown
     public void showDropdownRecords(){
