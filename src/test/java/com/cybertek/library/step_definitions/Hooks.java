@@ -10,16 +10,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
-    LoginPage loginPage = new LoginPage();
+  //  LoginPage loginPage = new LoginPage();
 
+ //  @Before
+ //       public void landingPage (){
+  //     loginPage.homePageLanding();
+  //     System.out.println("Before Hooks are in action");
 
-
-    @Before
-    public void landingPage (){
-        loginPage.homePageLanding();
-        System.out.println("Before Hooks are in action");
-
-    }
+ //  }
 
     @After
     public void tearDownScenario(Scenario scenario) {

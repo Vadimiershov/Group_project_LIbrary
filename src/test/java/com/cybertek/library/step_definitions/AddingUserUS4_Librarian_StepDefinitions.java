@@ -2,6 +2,7 @@ package com.cybertek.library.step_definitions;
 
 import com.cybertek.library.pages.LoginPage;
 import com.cybertek.library.pages.User_Page_Librarian;
+import com.cybertek.library.pages.UsersModule;
 import com.cybertek.library.utilities.BrowserUtils;
 import com.cybertek.library.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -18,10 +19,11 @@ public class AddingUserUS4_Librarian_StepDefinitions {
 
     LoginPage homePage = new LoginPage();
     User_Page_Librarian librarianPage = new User_Page_Librarian();
+    UsersModule usersModule = new UsersModule();
 
     @Given("user is on the homePage")
     public void user_is_on_the_home_page() {
-        homePage.homePageLanding();
+      homePage.homePageLanding();
 
     }
 
@@ -127,11 +129,18 @@ public class AddingUserUS4_Librarian_StepDefinitions {
     }
 
     @Then("new user {string} is successfully created")
-    public void newUserIsSuccessfullyCreated(String arg0) {
+    public void newUserIsSuccessfullyCreated(String newUser) {
+
+        String newUserActual=usersModule.firstNameInTheColumn.getText();
 
 
 
-    }
+            
+        }
+
+
+
+
 
     @When("librarian is on the add user window and clicks Close Button")
     public void librarian_is_on_the_add_user_window_and_clicks_close_button() {
