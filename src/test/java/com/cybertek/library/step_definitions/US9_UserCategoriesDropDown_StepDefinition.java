@@ -51,6 +51,7 @@ public class US9_UserCategoriesDropDown_StepDefinition {
         List<String>actualInColumn = BrowserUtils.getElementsText(usersModule.userGroupInGroupColumn);
         for (String s: actualInColumn) {
             System.out.println(s);
+            BrowserUtils.waitForVisibility(usersModule.firstNameInTheColumn,5);
             Assert.assertEquals(s, students);
         }
     }

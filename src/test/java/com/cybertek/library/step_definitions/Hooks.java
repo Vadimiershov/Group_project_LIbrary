@@ -27,7 +27,7 @@ public class Hooks {
             byte[] screenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenShot, "image/png", scenario.getName());
         }
-        System.out.println("After annotation from Hooks is in action");
+        //System.out.println("After annotation from Hooks is in action");
         Driver.closeDriver();
     }
 }

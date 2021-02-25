@@ -9,7 +9,7 @@ Feature: Librarian should be able to add users with valid info
 	#3. Librarians able to edit user info.
 
 
-  @G26-96
+  #@G26-96
   Scenario Outline:
     When librarian clicks on Add User button
     When librarian should see Add User prompt window
@@ -30,12 +30,12 @@ Feature: Librarian should be able to add users with valid info
       | 123@456# | Students   | ACTIVE   | 2021/03/01 | 2022/03/01 | San Diego, Ca   | email        |
       | 567@89&$ | Librarian  | INACTIVE | 2022/02/01 | 2023/02/01 | Los Angeles, Ca | email        |
 
-  @G26-96
+  #@G26-96
   Scenario: librarian should be able to close the Add User window with Close Button
     When librarian is on the add user window and clicks Close Button
     Then librarian should be able close Add User input window
 
-  @G26-96
+  #@G26-96
   Scenario: librarian should be able to edit user info
     When librarian clicks Edit User button
     And librarian is able to see Edit User Information window
