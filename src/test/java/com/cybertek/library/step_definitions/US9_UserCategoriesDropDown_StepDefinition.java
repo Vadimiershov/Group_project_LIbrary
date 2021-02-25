@@ -29,7 +29,7 @@ public class US9_UserCategoriesDropDown_StepDefinition {
         List<WebElement>webelements = select.getOptions();
         List<String>actualOptions = BrowserUtils.getElementsText(webelements);
         Assert.assertEquals(userGroupOption,actualOptions);
-        Driver.closeDriver();
+
     }
 
     @And("User select {string} option in User Group Dropdown")
@@ -44,7 +44,6 @@ public class US9_UserCategoriesDropDown_StepDefinition {
         List<String> actualInColumn = BrowserUtils.getElementsText(usersModule.userGroupInGroupColumn);
         Assert.assertTrue(actualInColumn.contains(students));
         Assert.assertTrue(actualInColumn.contains(librarians));
-        Driver.closeDriver();
     }
 
     @Then("User able to see only {string} in Group Column")
@@ -53,7 +52,6 @@ public class US9_UserCategoriesDropDown_StepDefinition {
         for (String s: actualInColumn) {
             System.out.println(s);
             Assert.assertEquals(s, students);
-            Driver.closeDriver();
         }
     }
 

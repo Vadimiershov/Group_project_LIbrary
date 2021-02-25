@@ -28,7 +28,6 @@ public class US10_StatusDropdown_StepDefinition {
         List<WebElement> webelements = select.getOptions();
         List<String> actualText = BrowserUtils.getElementsText(webelements);
         Assert.assertEquals(statusOption,actualText);
-        Driver.closeDriver();
     }
 
     @And("User select {string} status")
@@ -43,7 +42,7 @@ public class US10_StatusDropdown_StepDefinition {
         List<String> actual = BrowserUtils.getElementsText(usersModule.statusColumnInTable);
         for (String s : actual) {
             Assert.assertEquals(s,status);
-            Driver.closeDriver();
+
         }
     }
 

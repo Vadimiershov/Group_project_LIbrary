@@ -8,7 +8,7 @@ Feature: Librarian should be able to add users with valid info
 	#2. Librarians able to close the add user window with "close" button
 	#3. Librarians able to edit user info.
 
-  @G26-96
+  #@G26-96
 
   Scenario Outline:
     When librarian clicks on Add User button
