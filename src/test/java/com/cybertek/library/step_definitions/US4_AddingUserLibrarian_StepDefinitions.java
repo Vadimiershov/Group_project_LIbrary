@@ -154,11 +154,7 @@ public class US4_AddingUserLibrarian_StepDefinitions extends BrowserUtils {
 
     @Then("new user {string} is successfully created")
     public void newUserIsSuccessfullyCreated(String key) {
-        //    String newUserActual = usersModule.userTableEmails.toString();
 
-        //  String expectedEmail = getMemory().retrieveValue(newUser);
-
-//        Assert.assertEquals(expectedEmail, newUserActual);
         BrowserUtils.wait(10);
         Assert.assertTrue(librarianPage.confirmUser(key));
 
@@ -167,41 +163,67 @@ public class US4_AddingUserLibrarian_StepDefinitions extends BrowserUtils {
 
     @When("librarian is on the add user window and clicks Close Button")
     public void librarian_is_on_the_add_user_window_and_clicks_close_button() {
-//        BrowserUtils.waitForClickability(librarianPage.usersButton, 5);
-//        librarianPage.usersButton.click();
-//        String expected = "User Management";
-//        String actual = librarianPage.userManagement.getText();
-//        Assert.assertTrue(actual.contains(expected));
-//
-//         Clicks close button
-
-//
+        BrowserUtils.waitForClickability(librarianPage.usersButton, 5);
+        librarianPage.usersButton.click();
+        String expected = "User Management";
+        String actual = librarianPage.userManagement.getText();
+        Assert.assertTrue(actual.contains(expected));
+        BrowserUtils.waitForClickability(librarianPage.addUser, 5);
+        librarianPage.addUser.click();
 
 
     }
 
     @Then("librarian should be able close Add User input window")
     public void librarian_should_be_able_close_add_user_input_window() {
+        BrowserUtils.waitForClickability(librarianPage.closeButton, 5);
+        librarianPage.closeButton.click();
+        String expected = "User Management";
+        String actual = librarianPage.userManagement.getText();
+        Assert.assertTrue(actual.contains(expected));
 
-        // Assert that user is back
 
     }
 
     @When("librarian clicks Edit User button")
     public void librarian_clicks_edit_user_button() {
+        BrowserUtils.waitForClickability(librarianPage.usersButton, 5);
+        librarianPage.usersButton.click();
+        String expected = "User Management";
+        String actual = librarianPage.userManagement.getText();
+        Assert.assertTrue(actual.contains(expected));
+
+        BrowserUtils.waitForClickability(librarianPage.firstEditButton, 5);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", librarianPage.firstEditButton);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", librarianPage.firstEditButton);
 
     }
 
     @When("librarian is able to see Edit User Information window")
     public void librarian_is_able_to_see_edit_user_information_window() {
+        Assert.assertTrue(librarianPage.editWindowVisibility.isEnabled());
 
     }
 
     @Then("librarian can edit any user info and save changes")
     public void librarian_can_edit_any_user_info_and_save_changes() {
+        BrowserUtils.waitForClickability(librarianPage.inputPassword, 5);
+        librarianPage.inputPassword.click();
+        BrowserUtils.wait(2);
+        librarianPage.inputPassword.clear();
+        librarianPage.inputPassword.sendKeys(librarianPage.generateNewPassword());
+        BrowserUtils.wait(2);
+        librarianPage.inputPassword.sendKeys(Keys.RETURN);
+        BrowserUtils.wait(2);
+        Actions actions =new Actions(Driver.getDriver());
+        actions.click(librarianPage.saveChanges);
+        BrowserUtils.wait(2);
+        String expected = "User Management";
+        String actual = librarianPage.userManagement.getText();
+        Assert.assertTrue(actual.contains(expected));
+
 
     }
-
 
     public List<String> generateUserInfo() {
         List<String> list = new ArrayList<>(2);

@@ -2,6 +2,7 @@ package com.cybertek.library.pages;
 
 import com.cybertek.library.utilities.BrowserUtils;
 import com.cybertek.library.utilities.Driver;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -77,6 +78,18 @@ public class User_Page_Librarian extends BasePage {
     @FindBy(xpath = "//table[@id='tbl_users']//td[3]")
     public List<WebElement> userTableNames;
 
+    @FindBy(xpath = "//button[@type='cancel']")
+    public WebElement closeButton;
+
+    @FindBy(xpath = "(//a[@class='btn btn-primary btn-sm'])[1]")
+    public WebElement firstEditButton;
+
+    @FindBy(xpath = "(//div[@class='modal-body'])[1]")
+    public WebElement editWindowVisibility;
+
+
+
+
     public boolean confirmUser(String key) {
         List<WebElement> table = userTableNames;
 
@@ -90,6 +103,14 @@ public class User_Page_Librarian extends BasePage {
         return false;
     }
 
+
+
+    public String generateNewPassword(){
+        Faker passFaker = new Faker();
+        String faker= passFaker.finance().iban();
+
+        return faker;
+    }
 }
 
 

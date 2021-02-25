@@ -24,5 +24,5 @@ public class Memory {
         return map.get(key);
     }
 
-//    public void clearMemory
+
 }
