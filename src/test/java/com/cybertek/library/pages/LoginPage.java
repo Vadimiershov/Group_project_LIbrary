@@ -5,6 +5,7 @@ import com.cybertek.library.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 
 public class LoginPage extends BasePage {
 
@@ -48,7 +49,7 @@ public class LoginPage extends BasePage {
         Driver.getDriver().get(ConfigurationReader.getProperty("URL"));
         String expectedTab = "Login - Library";
         String actualTab = Driver.getDriver().getTitle();
-        Assert.assertTrue(expectedTab.equals(actualTab));
+        Assert.assertEquals(expectedTab, actualTab);
 
     }
 

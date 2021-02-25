@@ -3,6 +3,7 @@ package com.cybertek.library.pages;
 import com.cybertek.library.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 import java.util.List;
 
@@ -35,6 +36,12 @@ public class UsersModule extends BasePage{
     //webElement for verification added user is in the table
     @FindBy(xpath = "//table[@id='tbl_users']//tr[1]//td[3]")
     public WebElement firstNameInTheColumn;
+
+    @FindBy(css = "tbody>tr")
+    public List<WebElement> table;
+
+    @FindBy(xpath = "//table[@id='tbl_users']//td[4]")
+    public List<WebElement> userTableEmails;
 
     @FindBy(xpath = "//a[@class='nav-link']")
     public List<WebElement> listOfModulesLinks;
