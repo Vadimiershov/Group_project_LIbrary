@@ -1,3 +1,4 @@
+@smoke_test
 Feature: Show records functionality
 
  # @wip

@@ -1,3 +1,4 @@
+@smoke_test
 Feature:  As a students, I should be able to search books with different categories.
   #@us7
   Scenario: User should be able to search books according to categories

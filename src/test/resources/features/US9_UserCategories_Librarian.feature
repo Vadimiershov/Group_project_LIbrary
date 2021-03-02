@@ -1,3 +1,4 @@
+@smoke_test
 Feature: User Group
   As a librarian user I should be able to check User Group as All/Librarian/Students through dropdown
 

@@ -1,3 +1,4 @@
+@smoke_test
 Feature: Borrow
   I should  be able to see my borrowing books
 

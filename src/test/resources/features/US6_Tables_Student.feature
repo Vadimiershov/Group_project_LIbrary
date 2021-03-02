@@ -1,3 +1,4 @@
+@smoke_test
 Feature: As a students, I should be able to see tables with default info
 
   #@studentTables #name will be  from Jira

@@ -1,4 +1,5 @@
 #@modules
+@smoke_test
 Feature: Access to modules functionality
   As a user, I should be able to see several modules once I login.
 

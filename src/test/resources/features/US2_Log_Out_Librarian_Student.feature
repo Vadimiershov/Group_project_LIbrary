@@ -1,4 +1,4 @@
-
+@smoke_test
 Feature: As a user, librarian and student are able to log out
 
 
