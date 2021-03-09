@@ -1,6 +1,7 @@
 package com.cybertek.library.step_definitions;
 
 import com.cybertek.library.pages.LoginPage;
+import com.cybertek.library.utilities.BrowserUtils;
 import com.cybertek.library.utilities.ConfigurationReader;
 import com.cybertek.library.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -24,6 +25,7 @@ public class US1_Login_Step_Definitions {
             homePage.loginField.sendKeys(ConfigurationReader.getProperty("LoginStudent11"));
             homePage.passwordField.sendKeys(ConfigurationReader.getProperty("PassStudent11"));
             homePage.loginButton.click();
+            BrowserUtils.waitForVisibility(homePage.roleOfStudent,3);
             String actualRoleSt = homePage.roleOfStudent.getText();
             Assert.assertTrue(actualRoleSt.contains(role));
 
@@ -32,6 +34,7 @@ public class US1_Login_Step_Definitions {
             homePage.loginField.sendKeys(ConfigurationReader.getProperty("LoginLibrarian11"));
             homePage.passwordField.sendKeys(ConfigurationReader.getProperty("PassLibrarian11"));
             homePage.loginButton.click();
+            BrowserUtils.waitForVisibility(homePage.roleOfLibrarian,3);
             String actualRoleLb = homePage.roleOfLibrarian.getText();
             Assert.assertTrue(actualRoleLb.contains(role));
         }

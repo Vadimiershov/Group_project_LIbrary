@@ -26,6 +26,7 @@ LoginPage loginPage = new LoginPage();
 
     @When("the user is on {string} page")
     public void the_user_is_on_page(String string) {
+        BrowserUtils.waitForVisibility(loginPage.pageTitle,3);
         String actualPage = loginPage.pageTitle.getText();
         Assert.assertTrue(actualPage.equalsIgnoreCase(actualPage));
     }

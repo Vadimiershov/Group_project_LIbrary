@@ -1,4 +1,4 @@
-@smoke_test
+#@smoke_test
 Feature: Librarian should be able to add users with valid info
 
   Background: User should land on a homepage
