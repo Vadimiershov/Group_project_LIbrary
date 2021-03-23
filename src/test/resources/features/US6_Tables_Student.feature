@@ -1,7 +1,7 @@
-#@smoke_test
+@regression
 Feature: As a students, I should be able to see tables with default info
 
-  #@studentTables #name will be  from Jira
+  @studentTables #name will be  from Jira
   Scenario: Table column names
     Given the user on the homepage
     Then the user should see the following column names:

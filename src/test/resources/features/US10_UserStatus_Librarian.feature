@@ -1,4 +1,4 @@
-#@smoke_test
+@regression
 Feature: User status
   As a librarian user I should be able to check Active/Inactive status through dropdown Status
 

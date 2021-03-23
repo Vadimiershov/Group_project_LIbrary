@@ -1,4 +1,4 @@
-#@smoke_test
+@regression
 Feature: User management table feature
 
   Scenario: Table columns names check
