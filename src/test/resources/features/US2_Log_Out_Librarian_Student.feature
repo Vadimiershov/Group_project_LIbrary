@@ -1,4 +1,4 @@
-@smoke_test
+@smoke_test, @regression
 Feature: As a user, librarian and student are able to log out
 
 

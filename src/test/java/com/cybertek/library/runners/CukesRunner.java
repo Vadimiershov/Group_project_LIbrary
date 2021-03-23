@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"
         },
         features = "src/test/resources/features",
-        glue = "com/cybertek/library/step_definitions",
+        glue = {"com/cybertek/library/step_definitions"},
         dryRun = false,
-        tags = "@smoke_test"
+        tags = "@smoke_test or @regression"
 
 )
 public class CukesRunner {

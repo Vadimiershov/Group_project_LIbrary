@@ -1,5 +1,4 @@
-#@G26-90
-  @smoke_test
+@G26-90, @smoke_test, @regression
 
 Feature: As a user, librarian and student are able to login with valid credentials US1
 
