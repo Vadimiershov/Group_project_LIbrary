@@ -34,7 +34,7 @@
                     <threadCount>4</threadCount>
 
                     <perCoreThreadCount>false</perCoreThreadCount>
-                    <testFailureIgnore>false</testFailureIgnore>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/CukesRunner*.java</include>
                     </includes>
